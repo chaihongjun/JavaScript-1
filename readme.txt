@@ -3,3 +3,8 @@ git is a version control system
 git s a free software.
 i have change the file
 我的名字是长春
+
+printf("where are you ?");
+public void main(String[] args){
+	
+}
