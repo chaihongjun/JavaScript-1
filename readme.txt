@@ -6,5 +6,5 @@ i have change the file
 
 printf("where are you ?");
 public void main(String[] args){
-	
+	System.out.println("这个又是一次的修改");
 }
