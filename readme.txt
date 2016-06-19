@@ -7,4 +7,9 @@ i have change the file
 printf("where are you ?");
 public void main(String[] args){
 	System.out.println("这个又是一次的修改");
+	System.out.ptintln("这次的保存了吗？");
+}
+
+private  void you{
+	
 }
