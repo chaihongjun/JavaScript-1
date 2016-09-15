@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>js中字符串的处理2</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<div>
+		<span>你好呀！小宝贝！</span>
+	</div>
+</body>
+<script type="text/javascript">
+	
+
+	file = 'index.php';
+	name = 'com.wcc.packeg.hello.java';
+
+	//将 name这个字符串 以 . 进行分割，分割后的是一个字符串数组。
+	arr = name.split('.');
+	
+	//再从数组中取得最后一个元素，最后一个元素就是文件的后缀名
+	alert(arr[arr.length- 1]);
+ 
+ 	//还有一种办法是直接找打最后的一个. 然后再直接截取后面的文件名
+ 	alert(name.substr(name.lastIndexOf('.')+1));
+
+
+ 	/**
+ 	  数组
+ 	 */
+ 	//数组也是可以截取的 只能做到，从哪开始，到哪结束，不能做到截取多少个。
+ 	 // 不包含第二个参数中的元素。  字符串中也是有这个方法的，都是一样的效果。
+ 	a = arr.slice(1,2); 
+ 	alert('arr数组通过slice(1,2)可以获得的是一个什么东西其实是wcc：' + a);
+
+ 	he = arr.slice(-1);
+ 	// 弹出的he的话也是 最后的一个后缀名 
+ 	alert('事实证明，这个arr.slice()返回的是一个数组' + typeof(he));
+ 	//想获得最后的一个元素，那么通过slice()将获得一个数组， 只是里面只有一个元素而已
+ 	alert(arr.slice(-1));
+ 	
+ 	//还有一种是 用数组中的pop()方法，这个方法是直接返回 只能用于数组。
+ 	//类似于堆栈。
+ 	alert(arr.pop());
+
+ 	
+ 	
+ 	//还可以这个样子也是行的， 它返回的也是一个数组， 数组是可以当做一个堆栈来使用的
+ 	//可以将pop()操作将元素出栈的。
+ 	alert(arr.pop());
+ 	alert(arr.pop());
+ 	alert(arr.pop());
+
+ 	
+
+
+
+</script>
+</html>

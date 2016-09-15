@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>js中正则表达式的匹配</title>
+	<meta charset="utf-8">
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+phone = '13911111111';
+
+//匹配一个电话号码是否正确， 从头到尾  ^ 	$
+//有11 位{} 数字\ d 但是要以139 的数字开头，所以要^139  剩下的是\d{8}
+//只剩下8为的数字
+//alert(phone.match(/^139\d{8}$/i));
+//
+ if(phone.match(/^139\d{8}$/i)){
+ 	alert('输入的电话号码正确');
+ }else{
+ 	alert('输入的电话号码错误');
+ }
+
+</script>
+</html>

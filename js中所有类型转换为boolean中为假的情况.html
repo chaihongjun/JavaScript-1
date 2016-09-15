@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>js中的类型转化为boolean类型的为假的情况</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<h1>你好! 王长春！ </h1>
+</body>
+<script type="text/javascript">
+	
+	//空字符串转换为boolean类型为假
+	va = '';
+	alert('空字符串转化为Boolean类型为:'+ Boolean(va));
+
+	//浮点 0.0 转化为Boolean是为假
+	va = 0.0;
+	alert('0.0浮点型类型转换为Boolean类型为L:' + Boolean(va));
+
+	//对于对象来说，都是真的，不存在微假的情况。
+	alert('对于对象来说,转化为Boolean都是ture的:' + Boolean(new Array(1,2)));
+
+	//
+	alert('null 对于转换为Boolaen来说是:' + Boolean(null));
+
+
+</script>
+</html>

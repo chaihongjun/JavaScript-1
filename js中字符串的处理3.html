@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>js中字符串处理3</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<p>hello ! my bady !</p>
+</body>
+<script type="text/javascript">
+	str = '/web/home/index.java';
+
+	hello = '/web/home/index/indexhome/home.java';
+
+	//从字符串中找这段字符串是否存在于str中，如果存在的话，那么就返回起始的位置
+	//否则的话，没有找到的话，就是返回-1， 表示的是没有找到。
+	// 这个search() 可以接受的是正则表达式。
+	pos = str.search('/home/i');
+	alert(pos);
+	//正则表达式， 如果不是正则表达式的话，那么只找第一个，第二个就不找了
+	//正则表达式就可以直接将字符串中的所有匹配的都找到。
+	// g 表示的是逐行的匹配。 
+	arr = hello.match(/home/g);
+	alert(arr);
+	
+
+</script>
+</html>

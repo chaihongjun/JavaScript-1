@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>js中正则表达式的高级替换功能</title>
+	<meta charset="utf-8">
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+	date = '2016/02/09';
+
+	//在正则表达式中正则表达式的 字符串 / /  中从来是没有带上引号的
+	//      /  在正则表达式中要区别于正则表达式的 /  s所以要将 用\ 区别开来
+	//    使用向后引用 
+	//    正则表达式中 () 返回的是一个变量 $1 ,   以此类推，可以看出 想要的替换的是$1 - $2- $3 
+	da = date.replace(/(\d+)\/(\d+)\/(\d+)/g, '$1-$2-$3');
+
+	alert(da);
+
+</script>
+</html>
