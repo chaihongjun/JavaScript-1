@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>秒表</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		.myspan{
+
+			height: 100px;
+			width: 300px;
+			border-radius: 50px;
+			background: #000;
+			font-weight: bold;
+			color: #0f0;
+			text-align: center;
+			line-height: 50px;
+			font-size: 25px;
+
+		}
+	</style>
+</head>
+
+<body>
+	<span class="myspan" id="mySpan">11:45:55</span>
+</body>
+<script type="text/javascript">
+	
+	 date = new  Date();	
+	 mSapn = document.getElementById('mySpan');
+
+	 function getTime2 () {
+
+	 	date = new  Date();	
+		//mSapn = document.getElementById('mySpan');
+	 	hour = date.getHours();
+	 	if (hour < 10) {
+	 		hour  = '0' + hour;
+	 	}
+	 	min = date.getMinutes();
+	 	if (min < 10) {
+	 		min = '0' + min;
+	 	}
+	 	scend = date.getSeconds();
+	 	if (scend < 10) {
+	 		scend = '0' + scend;
+ 	 	}
+	 	//alert(hour +':' + min + '' + scend);
+	 	mSapn.innerHTML = hour +':' + min + ':' + scend;
+	 }
+	
+	//先调用这个设置的函数，防止第一出现页面的时候将默认的值显示在页面中。
+	 getTime2();
+	 //设置一个定时器
+    setInterval(function() {
+    	 getTime2();
+    }, 1000);
+    /*
+     设置定时器， 第一个参数是函数的名字,不能够将函数的() 写进去。
+     
+    setInterval(getTime2, 1000);
+
+     */
+
+
+
+
+
+</script>
+
+</html>

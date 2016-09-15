@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>秒表改进版</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		.myspan{
+			width: 300px;
+			height: 50px;
+			text-align:center;
+			background: #000;
+			color: #00f;
+			font-size: 30px;
+			font-weight: bold;
+			border-radius: 30px;
+			line-height: 50px;
+		}
+	</style>
+</head>
+	<span class="myspan" id="hello">12:30:30</span>
+	<br>
+	<button id="stop" >停止</button>
+	<button id="start" >开始</button>
+<body>
+<script type="text/javascript">
+	 
+	 mSpan = document.getElementById('hello');
+	 mStart = document.getElementById('start');
+	 mStop = document.getElementById('stop');
+
+	function getTime(){
+		date = new Date();
+
+		hour = date.getHours();
+		if (hour < 10) {
+			hour = '0' + hour;
+		}
+
+		muin = date.getMinutes();
+		if (muin < 10) {
+			muin ='0' + muin;
+		}
+
+		scend = date.getSeconds();
+		if (scend < 10) {
+			scend  = '0' + scend;
+		}
+
+		mSpan.innerHTML = hour + ':' + muin + ':' + scend;
+	}
+
+	getTime();
+
+	tiem = setInterval(getTime, 1000);
+	mStop.onclick  = function () {
+		 clearInterval(tiem);
+	}
+
+	mStart.onclick = function () {
+		 tiem = setInterval(getTime, 1000);
+	}
+	
+
+
+
+
+</script>
+</body>
+</html>
