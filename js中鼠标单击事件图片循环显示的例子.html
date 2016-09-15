@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>js中鼠标单击事件中图片循环显示的例子</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<img src="a.jpg" id="hello">
+</body>
+<script type="text/javascript">
+	obj = document.getElementById('hello');
+	i = 0;
+	obj.onclick = function () {
+		// if(i%2== 0) {
+		// 	obj.src = 'b.jpg';
+		// }else {
+		// 	obj.src = 'a.jpg';
+		// }
+		// i++;
+		// 
+		//上面的两种方法都是可以的， 就情况而言，下面的是不会出现i 的值出现不能容纳的情况
+		//但在上面的情况下，没有谁会去点击十几亿次。
+		if (0==i) {
+			obj.src = 'b.jpg';
+			i = 1;
+		}else {
+			obj.src = 'a.jpg';
+			i = 0;
+		}
+
+	}
+</script>
+</html>

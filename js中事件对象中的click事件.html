@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>js中事件对象中的click事件</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		*{
+			font-family: 微软雅黑;
+		}
+		.contimg{
+			width: 50px;
+			height: 50px;
+		}
+
+
+	</style>
+</head>
+<body>
+	<p>请选择文件</p>
+	<div class="contimg"  id="contimg">
+		<p><img src="up.jpg"></p>
+	</div>
+
+	<!-- 提交文件了的类型。类型是 file  -->
+
+	<input type="file" name="" id="fileUp">
+	<p><input type="submit" name=""></p>
+
+</body>
+<script type="text/javascript"> 
+	objimg = document.getElementById('contimg');
+	fileUp = document.getElementById('fileUp');
+
+	//点击文件上传图标之后，就将文件input框设置为点击，那么就可以将文件系统中的文件找到。
+	objimg.onclick = function () {
+		 fileUp.click();
+	}
+
+</script>
+</html>

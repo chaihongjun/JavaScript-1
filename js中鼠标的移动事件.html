@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>js中鼠标的移动事件</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		.hello{
+			width: 700px;
+			height: 500px;
+			padding: 50px;
+			margin:0px auto;
+			background: #ccc;
+		}
+		img{
+			/*非常要注意，一个分号的错误，都会导致整个css样式的失效，所以要格外的注意*/
+
+			width: 400px;
+			height:300px;
+			position: relative;
+			left: 50%;
+			top: 50%;
+			margin-top: -150px;
+			margin-left: -200px;
+			background: #f0f;
+		}
+	</style>
+</head>
+<body>
+	<div class="hello">
+		<img src="a.jpg" id="obj" >
+	</div>
+</body>
+<script type="text/javascript">
+	mobj  = document.getElementById('obj');
+
+	// document.onmousemove = function (event) {
+	// 	//alert(event.clientX);
+	// 	X = event.clientX;
+	// 	Y = event.clientY;
+	// 	document.title = X + '-' + Y;
+	// }
+
+	mobj.onmousemove = function (event) {
+		//获取事件中的我坐标值
+		X = event.clientX;
+		Y = event.clientY;
+		// 文档的标题 
+		document.title = X + '-'  + Y;
+	
+	}
+</script>
+</html>

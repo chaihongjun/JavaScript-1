@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>js中鼠标事件鼠标进入和移出</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		div{
+			width: 700px;
+			height: 500px;
+			padding: 50px;
+			margin:0px auto;
+			/*position: absolute;*/
+			background: #f00;
+		}
+		img{
+			background: #ccc;
+			position: relative;
+			left: 50%;
+			top: 50%;
+			margin-left: -200px;
+			margin-top: -150px;
+		}
+	</style>
+</head>
+<body>
+	<div id="hello">
+			<img src="a.jpg" id="myImag" width="400px" height="300px">
+	</div>
+
+</body>
+<script type="text/javascript">
+	mImage = document.getElementById('myImag');
+	//当鼠标移入的时候事件
+	mImage.onmouseenter = function () {
+		 mImage.src = 'b.jpg';
+		 mImage.style.borderRadius = '300px';
+	}
+
+	//当鼠标移除的时候事件
+	mImage.onmouseleave = function () {
+	mImage.src = 'a.jpg';
+	mImage.style.borderRadius ='300px';
+	}
+</script>
+</html>

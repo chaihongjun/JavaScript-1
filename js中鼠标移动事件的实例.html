@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>js中鼠标移动事件的实例</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		img{
+			width: 400px;
+			height: 300px;
+			left: 0px;
+			top: 0px;
+			/* 图片为绝对定位的时候才能够将随时的改变图片的位置*/
+			position: absolute;
+		}
+	</style>
+</head>
+<body>
+	<img src="a.jpg" id="obj">
+</body>
+<script type="text/javascript">
+		mobj = document.getElementById('obj');
+
+		//鼠标移动事件
+		document.onmousemove = function (event) {
+			 x = event.clientX;
+			 y  = event.clientY;
+
+			 document.title = x + '-' + y;
+
+			 //设置图片的最左上角的坐标与鼠标移动的坐标同样的位置
+			 //图片随着鼠标的移动而移动。
+			 mobj.style.top = y + 'px';
+			 mobj.style.left = x + 'px';
+
+		}
+
+</script>
+</html>
