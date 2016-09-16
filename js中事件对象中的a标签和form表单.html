@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>js中</title>
+	<meta charset="utf-8">
+</head>
+<body>
+
+<!--  a链接href="javascript:" 写成这样的话，就不会进行跳转了
+     在javascript中的代码 控制链接地址的去向-->
+	<a   href="javascript:" id="mya">Go ！ 去谷歌。</a>
+	<form action="hello.java"  id="myform">
+		<p>姓名:</p>
+		<p><input type="text" name=""></p>
+		<p>性别</p>
+		<p><input type="Radio" name="sex" value="男"></p>
+		<p><input type="Radio" name="sex" value="女"></p>
+		<p>身高</p>
+		<p><input type="text" name=""></p>
+		<p><input type="submit" name=""  value="提交哦"></p>
+	</form>
+</body>
+<script type="text/javascript">
+	obja = document.getElementById('mya');
+	objf = document.getElementById('myform');
+
+
+	 x = 10;
+
+	obja.onclick = function () {
+		if (x <  4) {
+			//如果返回的是false的话，那么啊链接是不会进行跳转的。
+			return false;
+		}else {
+			location = 'http://www.baidu.com';
+		}
+		 
+	}
+
+	//阻止表单的提交的话是，是给整个表单进行设置提交的事件响应的，
+	//一般表单中比比较少的使用向a链接一样的herf = “www.baidu.com“
+	objf.onsubmit = function () {
+	   if (x > 11) {
+	   	//阻止提交
+	       	return false;
+	    }else {
+	    	//设置提交的地址。
+	    	this.action = 'hello.php';
+	    }
+
+	}
+
+
+
+</script>
+</html>

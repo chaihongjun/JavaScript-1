@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>js中日期对象,获取时间</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<script type="text/javascript">
+	 	date = new Date();
+
+	 	year = date.getFullYear();
+	 	month = date.getMonth() + 1;
+	 	dat = date.getDate();
+	 	hour = date.getHours();
+	 	minute = date.getMinutes();
+	 	second = date.getSeconds();
+
+// 		注意，在js中月份是从0 开始的，所以，我们在形式月份的时候，要将月份加1 显示出来
+// 		
+	 	str =  year + '-' + month +'-'  + dat + '-' + 
+	 			hour + '-' + minute + '-' + second ;
+	 	alert(str);
+	</script>
+</body>
+</html>

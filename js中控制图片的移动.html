@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>js中控制动画移动</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+
+		/* 如果有你想实现网页中的东西动的话，那么一定要记住 图片没有设置position 的时候
+		默认是相对定位的，所以我们要设置Wie绝对定位 这样我们才能设置它位置，并且改变才有效
+		*/
+		img{
+			/*设置图片的位置，将图片由正方形变化为圆形*/
+			position: absolute;
+			width: 200px;
+			height: 200px;
+			border-radius: 100px;
+		}
+	</style>
+</head>
+<body>
+	<img src="b.jpg" id="you">
+</body>
+<script type="text/javascript">
+	
+	mobj =document.getElementById('you');
+	//mobj = document.getElementById('you');
+	
+	//alert(mobj);
+
+	xs = 0;
+	xv = 30;
+	ys = 0;
+	yv = 30;
+
+	document.onkeydown = function (event) {
+		 // keyCode 是一个属性，不是一个方法
+		 keyCode1 = event.keyCode;
+		 document.title = keyCode1;
+
+		 switch (keyCode1) {
+		 	//鼠标键的向左
+		 	case 37:
+		 		xs -= xv;
+		 		mobj.style.left = xs +'px';
+		 		break;
+		 	//鼠标键的向上
+		 	case 38:
+		 		ys -= yv;
+		 		mobj.style.top = ys +'px';
+		 		//alert('向上走'+mobj.style.top);
+		 		break;
+		 	//鼠标键的向右
+		 	case 39:
+		 		xs += xv;
+		 		//将图片的坐标进行重新的设置
+		 		mobj.style.left = xs +'px';
+		 		break;
+		 	//宿鼠标键的向下
+		 	case 40:
+		 		ys += yv;
+		 		//document.body.style.background ='#f00';
+		 		mobj.style.top = ys +'px';
+		 		
+		 		break;
+		 }
+
+	}
+
+</script>
+</html>
