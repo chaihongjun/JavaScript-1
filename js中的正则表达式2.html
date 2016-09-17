@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>js正则表达式2</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<P>赫拉丽 金橄榄 有天书啊 你好的 经济你给 宏观经济</P>
+	<p>亲戚</p>
+</body>
+<script type="text/javascript">
+	str  = 'p—p p_p p1p pop pup p p shell hello dela  theliisd  pap p*p p9p';
+
+
+//查找单个字符，除了换行和行结束符 连空格都是匹配的
+	arr = str.match(/p.p/ig);
+
+	//\w 查找单词符
+	//\W 查找非单词字符
+	//\d 查找数字 
+	alert(arr);
+
+	//\W代表除了字母、数字和下划线以外任意一个字符
+	arr = str.match(/p\Wp/ig);
+	alert(arr);
+
+	arr =  str.match(/p\wp/ig);
+
+	 alert(arr);
+
+
+</script>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>js中的几种消息框</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<a href="http://www.baidu.com" id="mya">百度</a>
+</body>
+<script type="text/javascript">
+	r = confirm('您确认删除吗？');
+
+	// 确认框中是有返回值的。
+	alert('用户选择的是:' + r);
+
+
+	mya = document.getElementById('mya');
+  	mya.onclick =function  () {
+  		a  =  confirm('您确认去百度吗？');
+  		if (!a) {
+  			return false;
+  			// r如果返回的是false， 就是阻止a链接的默认跳转行为
+  		}
+  	}
+
+
+</script>
+</html>

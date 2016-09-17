@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>index</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		*{
+			font-family: 微软雅黑;
+		}
+		.h2cls{
+			background: #ccc;
+		}
+
+		h2:hover{
+			background:#888;
+		}
+		.h2cls :hover{
+			background: #888;
+
+		}
+	</style>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+	for (var i = 0; i < 10; i++) {
+		if (i%2==0) {
+			document.write('<h2 class="h2cls">' + i + '<h2>');
+		}else {
+			document.write('<h2>' + i + '<h2>' );
+		}
+
+	}
+
+</script>
+</html>

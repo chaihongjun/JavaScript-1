@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>js中的正则表达式</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<p>何莉莉， 张小菊，丽丽他妈，小明他姐</p>
+</body>
+<script type="text/javascript">
+	
+	str = 'linux ,liux java, liNux, php, LINUX is varey much hello , pgp, hph, hllsdp, lixux';
+
+	// 全局和忽略大小写的匹配   其中 li ux=之间可出现的字符是n u x s
+	arr = str.match(/li[nux]ux/ig);
+	alert(arr);
+
+	//这个是弹出 除了字符串包含nu中的其他的字符串， 全局忽略大小写匹配
+	// 其中比如 liux 是一种中间为空的情况，这中情况是不会弹出的，所以中间字符串为空的情况是不属于
+	// 弹出范围的。只弹出上面字符串的lixux
+	arr = str.match(/li[^nu]ux/ig);
+	alert(arr);
+
+
+	//这里查找的是两个条件  | 前面匹配的是p....p  后面中匹配的是 li...ux  只要两个的条件匹配任何一个都是可以弹查找出来的。
+	arr = str.match(/(p[A-z]p)| (li[A-z]ux)/ig);
+	alert(arr);
+
+	
+
+
+</script>
+</html>
