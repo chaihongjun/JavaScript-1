@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>js中的数组对象</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<p>下面演示的是数组的排序</p>
+</body>
+<script type="text/javascript">
+	arr = [10, 19, 1000, 89, 78,345];
+	//arr.sort(compareFunction); 从里面的参数可以知道，人家是要让你自己传入一个比价的参数
+
+	//定义降序函数
+	function sourt_function(a, b) {
+		 return b-a;
+		 //返回 a-b 表示的是升序排序
+		 //如果返回的是 b-a 那么表示的是降序排序。
+	}
+	//排序后是会进行更改数组的。
+	arr.sort(sourt_function);
+
+	
+	/*
+	arr.sort(function function_name (argument) {
+		 // body...  
+	});
+	*/
+
+	alert(arr);
+</script>
+</html>

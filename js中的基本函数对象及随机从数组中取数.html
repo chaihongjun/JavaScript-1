@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>js中的基本函数以及随机从数组中取数</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<img src="" id="myimg">
+</body>
+<script type="text/javascript">
+	
+	my = document.getElementById('myimg');
+
+	//产生随机数， 向下去取整，取得的是数组的下标 从0 - index 
+	index = Math.floor(Math.random()*5);
+	arr  = ['a.jpg', 'b.jpg', 'c.jpg', 'd.jpg', 'e.jpg'];
+	//从数组中取的下标，然后设置图片的路径
+	my.src = arr[index];
+
+
+
+</script>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>js中的输入框</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<img   src="" id="myimg">
+</body>
+<script type="text/javascript">
+
+	my = document.getElementById('myimg');
+	//用户输入选择的图片， x接收用的选择
+	x = prompt('请输入你要选择的图片');
+	//拼接成图片的名称
+	x += '.jpg';
+	//设置图片的src 
+	my.src = x;
+
+</script>
+</html>
