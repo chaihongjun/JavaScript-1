@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>js中的的表单</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		.main{
+			width: 800px;
+			height: 700px;
+			margin:0 auto;
+			background: #ccc;
+
+		}
+		.left{
+ 			float:left;
+ 			padding: 5px;
+ 			width: 350px;
+ 			height: 300px;
+ 			background: #f00;
+ 		}
+
+		.right{
+			float: right;
+			padding: 5px;
+			width: 350px;
+			height: 300px;
+			background:#f0f;
+		}
+
+	</style>
+</head>
+<body>
+	
+	<div class="main">
+		<div class="left">
+			<p>用户名:</p>	
+			<p><input  id="userName1"   type="text" name=""></p>
+			<p>留言:</p>
+			<p><textarea id="textId2"></textarea></p>
+		</div>
+
+		<div class="right">
+			
+			<p>用户名:</p>
+			<p><input id="username" type="text" name="" placeholder="userName"></p>
+			<p>留言:</p>
+			<p><textarea name="message" id="textId1" placeholder="请留言"></textarea></p>
+
+		</div>
+		
+	</div>
+	
+</body>
+<script type="text/javascript">
+	//右边的
+	objUseName  =  document.getElementById('username');
+	objMessage = document.getElementById('textId1');
+
+	//左边的
+	objuser = document.getElementById('userName1');
+	objtextArea = document.getElementById('textId2');
+
+
+	objUseName.onkeyup= function () {
+		objser.value = this.value;
+	}
+
+	objMessage.onkeyup = function () {
+		 objtextArea.innerHTML = this.value;
+	}
+
+
+
+
+
+</script>
+</html>

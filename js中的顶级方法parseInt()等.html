@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>js中的顶级方法parseInt()</title>
+	<meta charset="utf-8">
+</head>
+<body>
+<script type="text/javascript">
+	
+	//转boolean类型
+	num = 10;
+	alert(Boolean(num) + 10);
+	/**
+	 *弹出的结果是  11  ：
+	 *为什么呢? 因为Boolean(20) d的值为true ， 而取值就是0  1 ，所以我们
+	 *最后得到的结果是 1 + 10  = 11;
+	 */
+
+	 // 字符串转整型	
+	 str = '100ddd';
+	 //如果用Number来转换这个字符串式转换不过来的，parseInt()显然是比它更加强大
+	 //因为它处理更加具体了，就是将前面的100 转换成整数。
+	 alert(Number(str) + 10);
+	 alert(parseInt(str) + 10);
+	 /*
+	 	弹出的结果很显然是 110;
+	  */
+	 
+	 //整型转字符串
+	 hello = 123;
+
+	 //弹出的是123456
+	 alert(String(hello) + 456);
+
+	  // eval 可以执行字符串表达式， 让字符串里面的表达式执行起来
+	 b  =  'a = 1- 10';
+	 //弹出的是 -9 
+	 alert(b);
+	 alert(eval(b));
+	 alert(a);
+
+</script>
+</body>
+</html>

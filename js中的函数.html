@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>js中的函数使用=</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		div{
+			height: 500px;
+			width: 500px;
+			background: #f00;
+			margin:0 auto;
+			position: absolute;
+		}
+
+		#mydiv{
+			height: 300px;
+			width: 200px;
+			background: #f0f;
+			position: relative;
+			left: 50%;
+			top: 50%;
+			margin-top: -150px;
+			margin-left: -100px;			
+		}
+	</style>
+</head>
+<body>
+		<!-- <div>
+			<div id="mydiv"> 
+				
+			</div>
+		</div> -->
+</body>
+<script type="text/javascript">
+	
+	function  out(n, k) {
+		for (var i = 1;  i<= n; ++i) {
+			document.write('<h3>')
+	        for(var j = 1; j <= i; ++j){
+	        	document.write('<span>'+ i + 'X' + j  + '=' + (i*j) +'</span> ');
+	        }
+	        document.write('</h3>');
+		}
+
+		for(var n = 0; n < k; n++){
+			document.write('<hr>');
+		}
+	}
+
+out(9,9);
+
+	
+</script>
+</html>
