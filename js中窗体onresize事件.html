@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>js中的窗体onresize事件响应</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		*{
+			font-family: 微软雅黑;
+		}
+		/*
+			在布置图片的时候是，最好能够将图片放在div中，因为图片是行级标签
+			如果直接在里面放置的话是是独占一行的，但是我们可以通过div将图片变成块级标签
+
+		*/
+		.content{
+			width: 600px;
+			height: 600px;
+			margin:0 auto;
+		}
+
+		
+
+
+	</style>
+</head>
+<body>
+	<div class="content">
+		<img src="b.jpg"> 
+		<div class="right">
+			
+		</div>
+
+	</div>
+</body>
+<script type="text/javascript">
+	//窗体改变的时候的事件的响应
+	window.onresize = function () {
+		 alert('窗体改变了!');
+	}
+</script>
+</html>

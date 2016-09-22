@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>js表格表单</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		*{
+			font-family: 微软雅黑;
+		}
+
+		tr{
+			align: center;
+		}
+	</style>
+</head>
+<body>
+		<table id="hello" border="2px" width="400px" >
+			<tr align="center">
+				<td>1111</td>
+				<td>1111</td>
+				<td>1111</td>
+			</tr>
+			<tr align="center">
+				<td>2222</td>
+				<td>2222</td>
+				<td>2222</td>
+
+			</tr>
+			<tr align="center">
+				<td>3333</td>
+				<td>3333</td>
+				<td>3333</td>
+			</tr>
+			<tr align="center">
+				<td>4444</td>
+				<td>4444</td>
+				<td>4444</td>
+			</tr>
+			<tr align="center">
+				<td>5555</td>
+				<td>5555</td>
+				<td>5555</td>
+			</tr>
+		</table>
+</body>
+<script type="text/javascript">
+
+	obj  = document.getElementById('hello');
+
+	function setName (i, j) {
+		obj.rows[i-1].cells[j-1].innerHTML = 'abc';
+	}
+
+   	
+	setName(2, 1);
+	setName(3,3);
+
+</script>
+</html>

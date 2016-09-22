@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>js中窗口加载完毕的时候的事件</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<img src="b.jpg" id="plane">
+</body>
+<script type="text/javascript">
+	image = document.getElementById('plane');
+	w = image.clientWidth;
+	h = image.clientHeight;
+
+	alert('图片的宽是:' + w +'   图片的高是:' + h);
+
+
+	// 用上面的方法是获取不到图片的宽和高的，因为窗体可能还没有加载完全，就开始去
+	// 执行下面的js代码了，所以或得的宽和高是为0 
+	
+
+	//上面的代码应该在窗体加载完毕的时候进行
+	window.onload = function () {
+		 image = document.getElementById('plane');
+		 w = image.clientWidth;
+		 h = image.clientHeight;
+		 alert('图片的宽是:' + w +'   图片的高是:' + h);
+
+	}
+	
+
+</script>
+</html>

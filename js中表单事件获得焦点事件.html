@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>js中表单事件</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		*{
+			font-family: 微软雅黑;
+
+		}
+	</style>
+</head>
+<body>
+	<form action="">
+		<p>用户名</p>
+		<input type="text" name=""  value="香茗" id="name">
+		<p>密码</p>
+		<input type="text" name=""  value = "123" id="pass">
+		<p><input type="submit"  value="提交" name=""></p>
+	</form>
+</body>
+<script type="text/javascript">
+	  obj = document.getElementById('name');
+	  obj.onfocus = function () {
+	  	 this.style.outlineColor = '#ff0'	
+	  	 this.value = '';
+	  }
+</script>
+</html>
