@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>变量运算符</title>
+	<meta charset="utf-8">
+
+</head>
+<body>
+	<h2>有没有看到出现的对话框了呢？</h2>
+</body>
+<script type="text/javascript">
+	/*
+	hello = 'hello9';
+	//用这个删除这个变量  那么就是不会弹出这个对话框的了。
+	delete hello;
+	alert(hello);
+	*/
+
+	//局部变量是删除不了的，知道吗？
+	var you = 10;
+	delete you;
+	alert(you);
+
+
+	//  in 运算符的使用
+	
+	arry = new Array(2,4,1,43,45);
+
+	//判读元素是否子啊数组中
+	//判断数组中的下标是否在一个数组中
+	//例如下面的3 下标为 3 的元素的在数组总，数组中有下标为3的元素
+	//所以是返回true
+	alert(3 in arry);
+
+	jso = {
+		'username':'wcc',
+		'age':'20',
+		'address':'江西省赣州市'
+	};
+
+	//弹出的是 false   leav属性不在jso对象中  json 对象中的in是判读属性是否存在json对象中。 
+	alert("leav 是否在这个json对象中呢?" + 'leav' in jso);
+
+</script>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>js中foerin()循环遍历json对象</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<p> welcome ! hello world ! </p>
+	<h1>你好世界！</h1>
+</body>
+	<script type="text/javascript">
+		
+		js = {'username': 'wcc', 'age':'20', 'adress':'江西爱赣州'};
+
+		for(i in js){
+			document.write('<h1>' + js. + '</h>');
+
+  		//注意，上面的i 是第一个属性赋值给i 注意是属性 不是属性的值。
+  		//那么怎么取得里面的值呢？js中有规定， 
+  		//对象.属性和方法的时候，方法名和属性名不能是变量，所以js.i这个做法是不行的。
+  		//那么 可以通过 js[i] ,这个很像数组但是又不是数组。
+  		// for   in 是专门用于对付数组的。
+  		
+		}
+		
+	</script></i>
+</html>

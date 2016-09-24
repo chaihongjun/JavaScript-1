@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>js中getElementsByTagName拿到标签对象</title>
+	<meta charset="utf-8">
+</head>
+<body>	
+	<h1  id="hello" info='java  is vary much' > dddddddddddddddddddddddddddddd</h1>
+	<h1>dddddddddddddddddddddddddddddddd</h1>
+	<h1>dddddddddddddddddddddddddddddddd</h1>
+	<h1>dddddddddddddddddddddddddddddddd</h1>
+	<h1>dddddddddddddddddddddddddddddddd</h1>
+	<h1>dddddddddddddddddddddddddddddddd</h1>
+	<h1>dddddddddddddddddddddddddddddddd</h1>
+	<h1>dddddddddddddddddddddddddddddddd</h1>
+	<h1>dddddddddddddddddddddddddddddddd</h1>
+	<h1>dddddddddddddddddddddddddddddddd</h1>
+	<h1>dddddddddddddddddddddddddddddddd</h1>
+	<h1>dddddddddddddddddddddddddddddddd</h1>
+	<h1>dddddddddddddddddddddddddddddddd</h1>
+
+</body>
+<script type="text/javascript">
+
+obj =document.getElementById('hello');
+//通过这个来进行获取非标准属性
+obj.getAttribute('info');
+alert(obj.getAttribute('info'));
+//通过这个来设置非标准属性值
+obj.setAttribute('info', 'java is vary vary much');
+alert(obj.getAttribute('info'));
+
+</script>
+</html>

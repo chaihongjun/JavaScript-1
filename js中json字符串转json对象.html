@@ -1,0 +1,31 @@
+ <!DOCTYPE html>
+ <html>
+ <head>
+ 	<title>js中json字符串转json对象</title>
+ 	<meta charset="utf-8"/>
+ </head>
+ <body>
+ 	<h2>good luck Wangchangchun !</h2>
+ </body>
+ <script type="text/javascript">
+
+ 	MyObject = "{'username':'wcc', 'age':'20'}";
+
+ 	/*
+		函数eval()要完整的执行表达式但是上面的json的字符不是一个完整的表达式
+		所以我们可以自在两边加上( )   这样就可执行不然你执行都是执行不了的。
+
+ 	 */
+ 	//获取你自己的子啊够着这个字符串的时候，你就要尽量够着成json的形式
+ 	//
+ 	my = "({'nusername': 'wcc1','age' :'25'})";
+ 	v = eval('(' + MyObject+ ')');
+ 	//然后下面就不用执行eval()的时候在括号里面加上() 了。
+ 	//
+ 	hel = eval(my);
+
+ 	alert(v.username);
+ 	alert(hel.age);
+
+ </script>
+ </html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>js中document.body通过类名拿到标签对象</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		*{
+			font-family: 微软雅黑;
+		}
+	</style>
+</head>
+<body>
+	<h1>啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</h1>
+	<h1 class="hello">oooooooooooooooooooooooooooooooooooo</h1>
+	<h1 class="hello">hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</h1>
+
+</body>
+<script type="text/javascript">
+	// 通过类名来拿到这个类名相同的对象
+	obj = document.getElementsByClassName('hello');
+	//拿到的是一个对象集合
+	//alert(obj);
+
+	obj[0].style.background = '#f0f';
+
+
+</script>
+</html>
