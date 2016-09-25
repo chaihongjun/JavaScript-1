@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>js中BOM对象中navigator对象</title>、
+	<meta charset="utf-8">
+	<style type="text/css">
+		*{
+			font-family: 微软雅黑;
+		}
+	</style>
+</head>
+<body>
+</body>
+<script type="text/javascript">
+
+ 
+		obj = navigator.userAgent;
+		//alert(obj);
+		//使用正则表达式来获取获浏览器信息，然后盘判读是哪一个浏览器
+		//在正则表达式中， 在下面的情况下，/ / 里面的如果想要截取东西，那么里面就不能够有空格，有空格和没有空格都是不一样的，所有我们要
+	     us = obj.match(/Chrome|Firefox|Trident/ig);
+	     alert(us[0]);
+	     //匹配的结果是返回一个数组 根据返回的结果，对不同的浏览器进行操作
+	     switch (us[0]) {
+	     	case 'Chrome':
+	     		//window.style.body.background = '#00f';  使用window对象是不能够达到修改这个body的背景颜色的
+	     		//此时使用的应该是在documnet中的body body的背景才能够进行修改
+	     		document.body.style.background = '#00f';
+	     		break;
+	     	case  'Firefox':
+	     		window.body.style.background = '#0f0';
+	     		break;
+	     	case 'Trident':
+	     	 	window.body.style.background = '#f00';
+	     	 	break;
+	     }
+	     
+
+
+</script>
+</html>

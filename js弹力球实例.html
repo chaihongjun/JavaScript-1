@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>js弹力球实例</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		*{
+			padding: 0px;
+			margin:0px;
+		}
+
+		#hello{
+			height: 128px;
+			width: 128px;
+			/*overflow: hidden;*/
+		}
+
+		img{
+			height: 128px;
+			width: 128px;
+			position: absolute;
+		}
+	</style>
+</head>
+<body>
+	<div id="hello">
+		<img src="ft.jpg" id="myimage">
+	</div>
+</body>
+<script type="text/javascript">
+
+	obj  = document.getElementById('myimage');
+	//y轴
+	ys = 0;
+	yv = 10;
+	//x轴
+	xs = 0;
+	xv = 10;
+
+
+	//得到浏览器的html高度
+	//clientHeight = document.documentElement.clientHeight;
+	//clientWith = document.documentElement.clientWidth;
+	//alert('现在的浏览器的高度是:' + clientHeight);
+	//pictureHeight = document.getElementById('hello').offsetHeigh;
+	pictureHeight = 128;
+	//alert('现在图片的高度是:' + pictureHeight);
+
+	//diffHeight = clientHeight- pictureHeight;
+	//diffWith = clientWith - pictureHeight;
+
+
+	setInterval(function () {
+		//设置为实时获取浏览器的高度，然后在计算diffheight 从而能够在浏览器改变大小的时候也在当前的大小中进行弹跳。
+		clientHeight = document.documentElement.clientHeight;
+		clientWith = document.documentElement.clientWidth;
+
+		diffHeight = clientHeight- pictureHeight;
+		diffWith = clientWith - pictureHeight;
+
+		ys += yv;
+
+		if (ys >=diffHeight ) {
+			ys = diffHeight;
+			//将弹力球原路返回，只需减少ys的值即可
+			yv = -yv;
+		}
+
+		if (ys <= 0) {
+			//当ys<= 0的时候，就将弹力球直接向下走。
+			yv = - yv;
+		}
+		obj.style.top = ys +'px';
+
+		//x轴上改变
+		xs+=xv;
+		if (xs >= diffWith) {
+			xs = diffWith;
+			xv = -xv;
+		}
+		if (xs <= 0) {
+			xv = -xv;
+		}
+
+		obj.style.left = xs +'px';
+
+
+
+	}, 50);
+</script>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>js键盘事件的响应</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	用户名：<input type="text" name="">
+	密  码：<input type="text" name="">
+	验证码：<input type="text" name="" value="" id="you">
+ 
+</body>
+<script type="text/javascript">
+	obj = document.getElementById('you');
+	//当鼠标起来的时候，事件响应了。
+	obj.onkeyup = function () {
+		va = this.value;
+		this.value = va.toUpperCase();
+	}
+	
+	
+	
+</script>
+</html>

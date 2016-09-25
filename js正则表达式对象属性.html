@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>js特效的改变</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		
+		img{
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<!-- 在html代码中直接进行改变样式  
+	 	 但是有一个缺点，就是会有太多的东西写在元素中了-->
+	<img src="a.jpg"  id="myImage" onclick="this.style.borderRadius = '250px', this.src='b.jpg'">
+</body>
+<script type="text/javascript">
+	
+	// //利用js代码来改变html中标签的样式
+	// mImage = document.getElementById('myImage');
+
+	// mImage.onclick = function () {
+	// 	//设置里面的图片的属性的时候我们要先是要拿到他的style属性，才能够将拿到样式的其他属性
+	// 	//设置的属性的值要带上引号，即使是数值型的数值。
+	// 	 mImage.src = 'b.jpg';
+	// 	 mImage.style.borderRadius = '250px';
+	// }
+
+</script>
+</html>

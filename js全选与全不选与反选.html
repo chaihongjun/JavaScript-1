@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>js全选与全不选与反选</title>
+	<meta charset="utf-8">
+
+</head>
+<body>
+<form>
+	<p>
+		<label>
+				<input type="checkbox" name="">游泳
+		</label>
+	</p>
+	<p>
+		<label>
+				<input type="checkbox" name="">羽毛球
+		</label>
+	</p>
+	<p>
+		<label>
+				<input type="checkbox" name="">篮球
+		</label>
+	</p>
+	<p>
+		<label>
+				<input type="checkbox" name="">乒乓球
+		</label>
+	</p>
+	<p>
+		<label>
+				<input type="checkbox" name="">艺术操
+		</label>
+	</p>
+	<p>
+		<label>
+				<input type="checkbox" name="">hello
+		</label>
+	</p>
+</form>
+<p>
+	<button id="all">全选</button>
+	<button id="notall">全不选</button>
+	<button id="unit">反选</button>
+</p>
+
+</body>
+<script type="text/javascript">
+	obj =  document.getElementsByTagName('input');
+
+	all = document.getElementById('all');
+	notall = document.getElementById('notall');
+	unit = document.getElementById('unit');
+
+	all.onclick = function () {
+		 for(i = 0; i < obj.length; i++){
+		 	obj[i].checked= true;
+		 }
+	}
+
+	notall.onclick =function () {
+		 for(i = 0; i < obj.length; i++) {
+		 	obj[i].checked= false;
+		 }
+	}
+
+	unit.onclick = function () {
+		 for( i = 0 ; i < obj.length; i++){
+		 // 这个是最简单的方法了 还有其他的
+		 // 最笨的方法是先判断 在取值 
+		 // 还有是三元运算符的运算 obj[i].ckecked = obj[i].checked ? false : true;
+		 	obj[i].checked = !obj[i].checked;
+		 }
+	}
+
+
+</script>
+</html>

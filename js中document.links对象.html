@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>js中document.link对象</title>
+	<meta charset="utf-8">
+</head>
+<body>	
+	<p><a href="http://www.baidu.com" name="baidu">百度</a></p>	
+	<p><a href="http://www.baidu.com" name="ali">阿里</a></p>
+	<p><a href="http://www.baidu.com" name="xian">西安</a></p>
+</body>
+<script type="text/javascript">
+	//document的直接对象 获取所有有href的集合
+	obj = document.links;
+	for( i = 0; i < obj.length; i++ ){
+		obj[i].style.textDecoration = 'line-through';
+
+	}
+
+	//获取有锚点的集合
+	obk = document.anchors;
+
+	for( j = 0 ; j < obk.length; j++){
+		obk[j].style.background = '#ff' + j;
+	}
+
+
+</script>
+</html>
