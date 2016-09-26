@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>从服务器获取验证码</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<img  id="myImage" src="a.jpg"/>
+</body>
+<script type="text/javascript">
+
+	obj = document.getElementById('myImage');
+	obj.onclick = function () {
+		alert("这里执行到了呀" + new Date().getTime());
+	}
+	
+</script>
+</html>

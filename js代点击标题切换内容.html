@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>js中点击标题切换选项</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		
+	</style>
+</head>
+<body>
+	<h1 line= '1'>Java</h1>
+	<p id="1">Java is varey good Java is varey good Java is varey good Java is varey good Java is varey good Java is varey good Java is varey good </p>
+	<h1 line = '2'>C++</h1>
+	<p id="2">C++ is vary good C++ is vary good C++ is vary good C++ is vary good C++ is vary good C++ is vary good C++ is vary good C++ is vary good </p>
+	<h1 line='3'>JavaScript</h1>
+	<p id="3">JavaScipt is vary good JavaScipt is vary good JavaScipt is vary good JavaScipt is vary good JavaScipt is vary good JavaScipt is vary good </p>
+	<h1 line = '4'>Html</h1>
+	<p  id="4">Html is vary good Html is vary good Html is vary good Html is vary good Html is vary good Html is vary good Html is vary good Html is vary good </p>
+
+</body>
+<script type="text/javascript">
+	objs = document.getElementsByTagName('h1');
+
+	for(i = 0; i < objs.length; ++i){
+		objs[i].setAttribute('num', 0);
+
+		objs[i].onclick = function () {
+			//要对这个进行转换华为int的才会有效果， 下面的count++才会按照数值型的进行++ 
+			count = parseInt(this.getAttribute('num'));
+			line = this.getAttribute('line');
+			p = document.getElementById(line);
+			if(count%2 == 0){
+				p.style.display = 'none';
+			}else {
+				p.style.display = 'block';
+			}
+			this.setAttribute('num', count+1);
+
+		};
+	}
+
+</script>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>js代码控制简单特效</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<h1> JAVA IS VARY GOOD LINUX IS VARY GOOD</h1>
+	<h1> JAVA IS VARY GOOD LINUX IS VARY GOOD</h1>
+	<h1> JAVA IS VARY GOOD LINUX IS VARY GOOD</h1>
+	<h1> JAVA IS VARY GOOD LINUX IS VARY GOOD</h1>
+	<h1> JAVA IS VARY GOOD LINUX IS VARY GOOD</h1>
+	<h1> JAVA IS VARY GOOD LINUX IS VARY GOOD</h1>
+	<h1> JAVA IS VARY GOOD LINUX IS VARY GOOD</h1>
+	<h1> JAVA IS VARY GOOD LINUX IS VARY GOOD</h1>
+	<h1> JAVA IS VARY GOOD LINUX IS VARY GOOD</h1>
+	<h1> JAVA IS VARY GOOD LINUX IS VARY GOOD</h1>
+	<h1> JAVA IS VARY GOOD LINUX IS VARY GOOD</h1>
+</body>
+<script type="text/javascript">
+  
+  obj = document.getElementsByTagName('h1');
+
+ for( i = 0 ;  i < obj.length; ++i){
+ 	obj[i].onmouseenter = function () {
+ 		 this.style.background = "#f0f";
+ 		 //  不是不能写成 obj[1].style.background = "#f0f";
+ 		 //  这个是不能够写成的。
+ 	}
+
+ 	obj[i].onmouseleave = function () {
+ 		 this.style.background = "#fff";
+ 	}
+
+ }
+
+
+
+</script>
+</html>
