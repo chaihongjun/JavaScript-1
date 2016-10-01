@@ -1,0 +1,15 @@
+*{
+	font-size: 20px;
+	font-family: 
+}
+.main{
+	width:970px;
+	height: 600px;
+	margin: 0 auto;
+	background: #0f0;
+}
+
+.content{
+	width: 500px;
+	height: 400px;
+}

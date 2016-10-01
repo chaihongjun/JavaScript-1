@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>js中BOM对象中的srceen对象的with属性</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="" id="csstype">
+	<script type="text/javascript">
+		scr = screen.width;
+		csstype = document.getElementById('csstype');
+		//alert(csstype);
+		//alert(scr);
+		
+		//根据用户的屏幕，将加载不同的css样式。
+ 
+		switch (scr) {
+			case 1024:
+			csstype.href = '1024.css';
+				break;
+			case 1366:
+			csstype.href = '1366.css';
+				break;
+			case 1280:
+			csstype.href = '1280.css';
+				break;
+			default:
+			//csstype.href = '1366.css';
+				break;
+		}
+
+	</script>
+</head>
+<body>
+	<div class="main">
+		<div class="content">
+			<p>hello！ Java Linux Php C++ </p>
+			<p>hello！ Java Linux Php C++ </p>
+			<p>hello！ Java Linux Php C++ </p>
+			<p>hello！ Java Linux Php C++ </p>
+			<p>hello！ Java Linux Php C++ </p>
+			<p>hello！ Java Linux Php C++ </p>
+			<p>hello！ Java Linux Php C++ </p>
+			<p>hello！ Java Linux Php C++ </p>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,15 @@
+*{
+	font-family: 微软雅黑;
+	font-size: 20px;
+}
+.main{
+	width: 1300px;
+	height: 1000px;
+	margin:0 auto;
+	background: #f00;
+}
+
+.content{
+	width: 500px;
+	height: 300px;
+}
