@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>js全选与全不选与反选</title>
+	<meta charset="utf-8">
+	<script type="text/javascript" src = "jquery.js"></script>
+</head>
+<body>
+<form>
+	<p>
+		<label>
+				<input type="checkbox" name="">游泳
+		</label>
+	</p>
+	<p>
+		<label>
+				<input type="checkbox" name="">羽毛球
+		</label>
+	</p>
+	<p>
+		<label>
+				<input type="checkbox" name="">篮球
+		</label>
+	</p>
+	<p>
+		<label>
+				<input type="checkbox" name="">乒乓球
+		</label>
+	</p>
+	<p>
+		<label>
+				<input type="checkbox" name="">艺术操
+		</label>
+	</p>
+	<p>
+		<label>
+				<input type="checkbox" name="">hello
+		</label>
+	</p>
+</form>
+<p>
+	<button id="all">全选</button>
+	<button id="notall">全不选</button>
+	<button id="unit">反选</button>
+	<button id="chang">传送</button>
+	<hr>
+	<div  class="info"></div>
+</p>
+
+</body>
+<script type="text/javascript">
+	//  进行全选。
+	$('#all').click(function(){
+		// 找到所有的checkbox中的元素  ， 然后设置属性为true
+		$(':checkbox').attr({'checked':true});	
+	});
+
+	// 进行全不选
+	$('#notall').click(function(){
+		$(':checkbox').attr({'checked':false});
+	});
+
+	//进行反选， 对checkbox进行反选，先进行遍历，然后对其值进行取反
+	$('#unit').click(function(){
+		$(':checkbox').each(function(){
+			this.checked = !this.checked;
+		});	
+	});
+
+	// 进行传送
+	$('#chang').click(function(){
+		$(':checked').parent().parent().appendTo('.info');
+	});
+
+
+</script>
+</html>

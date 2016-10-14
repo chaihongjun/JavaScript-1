@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>index</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		.jiu{
+			margin-top: 20px;
+			width: 210px;
+			overflow: hidden;
+			margin-left: 50px;
+			float: left;
+
+		}
+	</style>
+	<script type="text/javascript"  src='jquery-3.1.1.js'></script>
+</head>
+<body>
+<div class="jiu">	
+	<img src="b.jpg" alt="">
+</div>
+<div class="jiu">	
+	<img src="b.jpg" alt="">
+</div><div class="jiu">	
+	<img src="b.jpg" alt="">
+</div>
+<div class="jiu">	
+	<img src="b.jpg" alt="">
+</div>
+<div class="jiu">	
+	<img src="b.jpg" alt="">
+</div>
+<div class="jiu">	
+	<img src="b.jpg" alt="">
+</div>
+<div class="jiu">	
+	<img src="b.jpg" alt="">
+</div>
+<div class="jiu">	
+	<img src="b.jpg" alt="">
+</div>
+<div class="jiu">	
+	<img src="b.jpg" alt="">
+</div>
+
+
+</body>
+<script type="text/javascript">
+	// hover 
+	$('img').hover(
+		function(){
+			//  动画
+			$(this).animate({
+				'margin-left':'-80px'
+			},500);
+		},
+
+		function(){
+			$(this).animate({
+				'margin-left':'0px'
+			},500);
+		}
+	);
+
+</script>
+</html>
