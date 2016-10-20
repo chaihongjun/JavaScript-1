@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>index</title>
+	<meta charset="utf-8">
+	<script type="text/javascript" src= "jquery.js"></script>
+	<style type="text/css">
+		
+
+	</style>
+</head>
+<body>
+<div  class="div1">
+	<h1>000000001</h1>
+	<h1>000000002</h1>
+	<h1>000000003</h1>
+	<h1>000000004</h1>
+	<h1>000000005</h1>
+	<h1>000000006</h1>
+	<h1>000000007</h1>
+
+</div>
+<hr>
+<div class="div2">
+	
+</div>
+</body>
+<script type="text/javascript">
+		/*
+		$('.div1 h1').click(function(){
+			// 将自己向div2中前追加 
+			$(this).prependTo('.div2');
+		});
+		*/
+	$('.div1 h1').click(function(){
+		//   向div2中追加自己
+		$('.div2').prepend($(this));
+	});
+
+/*
+	$('.div1 h1').click(function(){
+		// 向 div2 中的向后追加 元素（追加自己）
+		$('.div2').append($(this));
+
+		// $(this).appendTo('.div2');  将自己追加到div2中。
+	});
+	*/
+</script>
+</html>

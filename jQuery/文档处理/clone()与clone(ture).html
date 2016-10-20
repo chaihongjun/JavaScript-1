@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>index</title>
+	<meta charset="utf-8">
+	<script type="text/javascript" src= "jquery.js"></script>
+	<style type="text/css">
+		
+
+	</style>
+</head>
+<body>
+<div  class="div1">
+	<img src="a.jpg">
+
+</div>
+<hr>
+<div class="div2">
+	
+</div>
+</body>
+<script type="text/javascript">
+	$('img').click(function(){
+		// 将自己克隆 ，追加到末尾，但是克隆后的对象是不具备事件等一些属性的。
+		//$(this).after($(this).clone());
+		/*
+		带参数的clone() 方法。
+		1:一个布尔值（true 或者 false）指示事件处理函数是否会被复制。
+		2:一个布尔值，指示是否对事件处理程序和克隆的元素的所有子元素的数据应该被复制。
+		 */
+
+		$(this).after($(this).clone(true));
+		
+	});
+</script>
+</html>

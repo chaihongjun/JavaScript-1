@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>index</title>
+	<meta charset="utf-8">
+	<script type="text/javascript" src= "jquery.js"></script>
+	<style type="text/css">
+		
+
+	</style>
+</head>
+<body>
+<div  class="div1">
+	<h1>000000001</h1>
+	<h1>000000002</h1>
+	<h1>000000003</h1>
+	<h1>000000004</h1>
+	<h1>000000005</h1>
+	<h1>000000006</h1>
+	<h1>000000007</h1>
+
+</div>
+<hr>
+<div class="div2">
+	
+</div>
+</body>
+<script type="text/javascript">
+	$('h1').click(function(){
+		val = $(this).html();
+		// 这个操作是类似于将这个p 进行插入，然后变成了 <h><p></p></h>
+		///$(this).html('<p>'+ val + '</p>');
+		//这个就是直接进行替换的。
+		$(this).replaceWith('<p>'+ val + '</p>');
+	});
+</script>
+</html>
