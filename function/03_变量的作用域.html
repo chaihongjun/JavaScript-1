@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>变量的作用域</title>
+	<meta charset="utf-8">
+	<style type="text/css"></style>
+	<script type="text/javascript"></script>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+	/**
+	 * 变量的作用域：
+	 *  javascript 中存在(变量)
+	 *  	*全局变量：全局域
+	 *  	*局部变量：当前局部域(函数域)
+	 *   javascript中存在(域)
+	 *   	*全局域
+	 *   	*函数域(局部域)
+	 */
+	
+//	var a = "a";
+//	
+//	function fn(){
+//		var b = "b";
+//		
+//		alert(a);		//output	a
+//		alert(b);		//output	b
+//	}
+//	
+//	fn();
+//	alert(a);			//output	a
+//	alert(b);			//output	undefind
+	
+	/**
+	 * 定义局部变量时，不使用"var" 修饰符”：
+	 * 	*javascript语法上支持这种写法
+	 * 	*局部变量b被定义出来
+	 * 	*javascript会自动将局部变量b定义为全局变量
+	 * 在实际开发中，不建议这样编写
+	 * 	*编码不规范
+	 * 	
+	 */
+//	var a = "a";
+//	
+//	function fn(){
+//		b = "b";
+//		
+//		alert(a);		//output	a
+//		alert(b);		//output	b
+//	}
+//	
+//	fn();
+//	alert(a);			//output	a
+//	alert(b);			//output	b
+
+/**
+ * 在javascript中，定义全局变量与局部变量同名时：
+ * 	*在函数域中，只能访问到局部变量
+ *
+ * 解读代码(代码的执行情况)
+ * 	*定义一个全局变量a, 并初始化为a(存在并且有值)
+ * 	*定义一个函数fn()(而不执行的时候)
+ * 		*局部变量a被定义，并没有初始化(存在但是没有值)
+ * 	*调用函数fn()
+ * 		*第一次打印变量a,  是局部变量a， 结果为undefined
+ * 		*第二次打印变量a,  是局部变量a,  结果为b
+ * 	*在全局域中，访问变量a， 只能是全局变量a
+ * 	
+ */
+
+	var a =  "a";
+	function() {
+		alert(a);  //  output  undefind
+
+		var  a = "b"；
+
+		alert(a);  // output  b
+	}
+
+	fu();
+	alert(a);  //output    a
+
+</script>
+</html>
