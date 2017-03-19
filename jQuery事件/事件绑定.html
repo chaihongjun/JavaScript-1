@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>事件绑定</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="jquery.js">
+		
+	</script>
+</head>
+<body>
+	  <div id="panel">
+			<input type="button" id="start" value="绑定事件">
+			<input type="button" id="stop" value="解绑事件">
+			<h5 class="head">什么是jQuery?</h5>
+			<div class="content">
+				jQuery是继Prototype之后又一个优秀的JavaScript库，它是一个由 John Resig 创建于2006年1月的开源项目。jQuery凭借简洁的语法和跨平台的兼容性，极大地简化了JavaScript开发人员遍历HTML文档、操作DOM、处理事件、执行动画和开发Ajax。它独特而又优雅的代码风格改变了JavaScript程序员的设计思路和编写程序的方式。
+			</div>
+		</div>
+</body>
+<script type="text/javascript">
+	/*
+	//单鼠标点击h5标签的时候，显示答案，当鼠标再次点击的时候，隐藏答案。
+		$("h5").click(function(){
+			if($("div[class=content]").is(":hidden")){
+				$("div[class=content]").show();
+			}else{
+				$("div[class=content]").hidden();
+			}
+		})
+	*/
+
+
+	// //动态效果
+	// $("#start").click(function(){
+	// 	/**
+	// 	 * 动态绑定事件：绑定单个事件
+	// 	 * bind(type,date,fn)
+	// 	 * 	*type:指定要绑定的事件名称
+	// 	 * 	*data:(可选)作为event.data属性值传递给事件对象的额外数据对象
+	// 	 * 	*fn : 回到调函数 function(){}
+	// 	 * 
+		 
+	// 	$("h5").bind("click", function(){
+	// 		if ($("div[class=content]").is(":hidden")) {
+	// 			$("div[class=content]").show();
+	// 		}else{
+	// 			$("div[class=content]").hide();
+	// 		}
+	// 	});
+	// })
+	// 
+	
+	$("#stop").click(function(){
+		/**
+		 * 动态解绑定点击事件
+		 * unbind(type ,fn)
+		 * 	*type:(可选) 指定要解绑的事件名称
+		 * 	*fn:(可选)回调函数
+		 */
+		$("h5").unbind();
+	})
+
+
+	//动态效果
+	$("#start").click(function(){
+		/**
+		 * 	绑定事件：绑定多个事件
+		 * 		*事件名称之间，用空格隔开
+		 */
+		$("h5").bind("mounseover mouseout" , function(){
+			if($("div[class=content]").is(":hidden")){
+				$("div[class=content]").show();
+			}else{
+				$("div[class=content]").hide();
+			}
+		})
+			
+		 
+	})
+
+	$("#stop").click(function(){
+		/**
+		 * unbind(type)
+		 * 	*默认为空时：解绑所有事件
+		 * 	*指定单个事件：解绑指定的单个事件
+		 * 	*指定多个事件：解绑指定的多个事件
+		 */
+		$("h5").unbind("mouseover mouseout");
+	})
+
+
+</script>
+</html>

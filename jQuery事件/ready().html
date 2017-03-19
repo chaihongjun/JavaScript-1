@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ready方法</title>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript"  >
+
+	/** @type {Date} [description] 
+		使用ready()的方法是明显比onlaod方法的。
+	*/
+		var beg = new Date().getTime();
+		$(document).ready(function(){
+			test1();
+		})
+
+		function test1(){
+			var emd = new Date().getTime();
+			var time = emd-beg;
+			$("<p>jQuery的ready()方法用时：" +  time  + "</p>").appendTo("body");
+		}
+
+		function test2(){
+			
+			var  end = new Date().getTime();
+			var time = end-beg;
+			$("<p>JavaScrpit的window.onlaod()方法用时：" + time + "</p>").appendTo("body");
+		}
+	</script>
+</head>
+<body  onload="test2();">
+	<img src="a.jpg">
+</body>
+</html>
