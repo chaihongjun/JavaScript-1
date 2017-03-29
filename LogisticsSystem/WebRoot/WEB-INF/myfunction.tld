@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 自己从tld文件中的模板中拷贝出这一点的东西，就可以将构造自己的东西了 -->
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"
+  version="2.0">
+  <tlib-version>1.1</tlib-version>
+  <!-- 简写名称 -->
+  <short-name>myfn</short-name>
+  <!--路径随便写的  -->
+  <uri>http://www.itheima.com/jsp/myfn</uri>
+
+  <function>
+  	<!--函数的名称 -->
+    <name>myfunction</name>
+    <!-- 方法在哪一个包下 -->
+    <function-class>com.wcc.uitl.MyFunction</function-class>
+    <!--  方法的函数签名-->
+    <function-signature>boolean myfunction(java.lang.String[], java.lang.String)</function-signature>
+  </function>
+</taglib>
